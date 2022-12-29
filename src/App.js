@@ -8,15 +8,13 @@ import { useState, useEffect } from "react";
 import "./App.css"
 import AddItem from './components/AddItem';
 import Search from './components/Search';
-import apiRequest from "./apiRequest";
 
 function App() {
    const [items, setItems] = useState(JSON.parse(localStorage.getItem("shoppinglist")))
   const API_URL = "http://localhost:3500/items"
   // const [items, setItems] = useState([])
   let [search, setSearchItem] = useState("")
-  let [fetchError, setError] = useState(null)
-  let [isLoading, setLoading] = useState(true)
+ 
   useEffect(() => {
     // let fetchItems = async () => {
     //   try {
