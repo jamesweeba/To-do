@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +9,121 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 550px;  
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 10%;
+
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App>div {
+  padding: 10px;
+  border-radius: 1px;
+  width: 100%;
+}
+
+.head {
+  background: royalblue;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  background: rgb(255, 255, 255);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+
+.footer {
+  background: royalblue;
+  display: flex;
+  justify-content: center;
+}
+
+ul{
+  width: 100%;
+  list-style: none;
+  padding: 0 0.25rem 0.25rem ;
+}
+ul li::after{
+  content: "\2008";
+}
+.item{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #eee;
+  margin: 0.25rem 0;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  color:royalblue;
+}
+.item:first-child{
+  margin: 0;
+}
+.item input[type="checkbox"]{
+  text-align: center;
+  width: 2.5rem;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+}
+.item input[type="checkbox"]:focus+label{
+  text-decoration: underline;
+}
+
+.item svg:focus
+.item svg:hover{
+  outline: none;
+  color: red;
+}
+
+.item >label{
+  font-size:0.75rem;
+  flex-grow: 1;
+}
+.item svg{
+  width: 48px;
+  color: royalblue;
+  cursor: pointer;
+  height: 36px;
+}
+.ItemForm{
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ItemForm input[type="text"]{
+  width: 100%;
+  height: 30px;
+  border-color: royalblue;
+  border-radius: 5px;
+}
+
+.searchForm{
+  margin-top: 10px;
+  width: 100%;
+
+}
+
+.searchForm input[type="text"]{
+  width: 100%;
+  height: 30px;
+  border-color: royalblue;
+  border-radius: 5px;
+
 }
